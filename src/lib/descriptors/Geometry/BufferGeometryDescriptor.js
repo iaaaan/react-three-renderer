@@ -23,6 +23,7 @@ class BufferGeometryDescriptor extends GeometryDescriptorBase {
       'normal',
       'color',
       'uv',
+      'opacity'
     ].forEach((attributeName) => {
       this.hasProp(attributeName, {
         type: PropTypes.oneOfType([
