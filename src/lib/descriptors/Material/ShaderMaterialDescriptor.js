@@ -25,6 +25,12 @@ class ShaderMaterialDescriptor extends MaterialDescriptorBase {
       default: undefined,
     });
 
+    this.hasProp('attributes', {
+      type: PropTypes.any,
+      simple: true,
+      default: undefined,
+    });
+
     this.hasWireframe();
   }
 
@@ -41,6 +47,10 @@ class ShaderMaterialDescriptor extends MaterialDescriptorBase {
 
     if (props.hasOwnProperty('fragmentShader')) {
       materialDescription.fragmentShader = props.fragmentShader;
+    }
+
+    if (props.hasOwnProperty('attributes')) {
+      materialDescription.attributes = props.attributes;
     }
 
     return materialDescription;
