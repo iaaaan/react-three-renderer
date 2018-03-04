@@ -9,6 +9,12 @@ class ShaderMaterialDescriptor extends MaterialDescriptorBase {
   constructor(react3RendererInstance) {
     super(react3RendererInstance);
 
+    this.hasProp('linewidth', {
+      type: PropTypes.number,
+      simple: true,
+      default: 1,
+    });
+
     [
       'vertexShader',
       'fragmentShader',
