@@ -68,8 +68,9 @@ class ShaderMaterialDescriptor extends MaterialDescriptorBase {
 
   construct(props) {
     const materialDescription = this.getMaterialDescription(props);
-
-    return new THREE.ShaderMaterial(materialDescription);
+    const m = new THREE.ShaderMaterial(materialDescription);
+    console.log(m)
+    return m;
   }
 
   invalidChildInternal(child) {
