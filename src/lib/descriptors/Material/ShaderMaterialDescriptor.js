@@ -43,6 +43,10 @@ class ShaderMaterialDescriptor extends MaterialDescriptorBase {
   getMaterialDescription(props) {
     const materialDescription = super.getMaterialDescription(props);
 
+    if (props.hasOwnProperty('linewidth')) {
+      materialDescription.linewidth = props.linewidth;
+    }
+
     if (props.hasOwnProperty('uniforms')) {
       materialDescription.uniforms = props.uniforms;
     }
