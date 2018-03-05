@@ -16,6 +16,12 @@ class MeshLambertMaterialDescriptor extends MaterialDescriptorBase {
     this.hasMap('specularMap');
     this.hasMap('alphaMap');
     this.hasMap('envMap');
+
+    this.hasProp('onBeforeCompile', {
+      type: PropTypes.func,
+      simple: true,
+      default: undefined,
+    });
   }
 
 
