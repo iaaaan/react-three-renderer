@@ -14,6 +14,12 @@ class MeshPhongMaterialDescriptor extends MaterialDescriptorBase {
     this.hasColor('emissive', 0x000000);
     this.hasWireframe();
 
+    this.hasProp('onBeforeCompile', {
+      type: PropTypes.func,
+      simple: true,
+      default: undefined,
+    });
+
     this.hasProp('shininess', {
       type: PropTypes.number,
       simple: true,
