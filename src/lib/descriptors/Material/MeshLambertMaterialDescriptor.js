@@ -1,5 +1,7 @@
 import * as THREE from 'three';
 
+import PropTypes from 'prop-types';
+
 import MaterialDescriptorBase from './MaterialDescriptorBase';
 
 class MeshLambertMaterialDescriptor extends MaterialDescriptorBase {
