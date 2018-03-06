@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import PropTypes from 'prop-types';
 
 import MaterialDescriptorBase from './MaterialDescriptorBase';
 
@@ -13,6 +14,12 @@ class MeshBasicMaterialDescriptor extends MaterialDescriptorBase {
     this.hasMap('specularMap');
     this.hasMap('alphaMap');
     this.hasMap('envMap');
+
+    this.hasProp('onBeforeCompile', {
+      type: PropTypes.func,
+      simple: true,
+      default: undefined,
+    });
   }
 
   construct(props) {
