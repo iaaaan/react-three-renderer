@@ -22,6 +22,7 @@ class GeometryDescriptorBase extends THREEElementDescriptor {
             threeObject.vertices = vertices;
 
             threeObject.verticesNeedUpdate = true;
+            threeObject.computeBoundingSphere();
           }
         }
       },
